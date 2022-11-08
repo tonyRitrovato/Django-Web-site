@@ -1,12 +1,39 @@
 {% extends 'index/common.html'%}
 
 {% block content %}
+<style>
+  @media (min-width: 1000px){
+    form.responsive{
+      width: 50%;
+      margin-left: 25%;
+    }
+  }
 
-<input class="form-control form-control-lg" type="text" placeholder="inserisci qui il tuo nome" style="margin-top: 2%; width: 50%; margin-left: 25%;">
-<input class="form-control" type="text" placeholder="inserisci qui il tuo cognome" style="margin-top: 2%; width: 50%; margin-left: 25%;">
+  @media (max-width: 1000px) {
+    form.responsive{
+      width: 80%;
+      margin-left: 10%;
+    }
+  }
 
-<div style="margin-top: 2%; width: 50%; margin-left: 25%;" class="input-group flex-nowrap">
-    <span class="input-group-text" id="addon-wrapping">@</span>
-    <input type="text" class="form-control" placeholder="inserisci qui la tua email">
+/*  */
+</style>
+<form class="row g-3 responsive" style="margin-top: 20px;">
+  <div class="col-md-6">
+    <label class="form-label">nome</label>
+    <input type="text" class="form-control" id="inputEmail4">
   </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">cognome</label>
+    <input type="text" class="form-control" id="inputPassword4">
+  </div>
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text" id="addon-wrapping">@</span>
+    <input type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+  </div>
+
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
 {% endblock %}
