@@ -3,14 +3,14 @@
 {% block content %}
 <style>
   @media (min-width: 1000px){
-    form.responsive{
+    .responsive{
       width: 50%;
       margin-left: 25%;
     }
   }
 
   @media (max-width: 1000px) {
-    form.responsive{
+    .responsive{
       width: 80%;
       margin-left: 10%;
     }
@@ -31,9 +31,36 @@
     <span class="input-group-text" id="addon-wrapping">@</span>
     <input type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
-
+  <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true" style="margin-top: 20px;">
+    <label for="example">inserisci la data di nascita</label>
+    <input placeholder="Select date" type="date" id="example" class="form-control">
+    
+    <i class="fas fa-calendar input-prefix"></i>
+  </div>
+  <div class="input-group mb-3">
+    <label class="input-group-text" for="inputGroupSelect01">numero biglietti</label>
+    <select class="form-select" id="inputGroupSelect01">
+      <option selected></option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </div>
   <div class="col-12">
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    <button type="submit" class="btn btn-primary">acquista</button>
   </div>
 </form>
+
+<script>
+  $('.datepicker').datepicker({
+  inline: true
+});
+</script>
 {% endblock %}
