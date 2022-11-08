@@ -1,14 +1,12 @@
 {% extends 'index/common.html'%}
 
 {% block content %}
-<div style="margin-top: 3%; width: 50%; margin-left: 25%;" class="input-group">
-    <span class="input-group-text">Inserisci qui il tuo nome e cognome</span>
-    <input type="text" class="form-control">
-    <input type="text" class="form-control">
-  </div>
+
+<input class="form-control form-control-lg" type="text" placeholder="inserisci qui il tuo nome" style="margin-top: 2%; width: 50%; margin-left: 25%;">
+<input class="form-control" type="text" placeholder="inserisci qui il tuo cognome" style="margin-top: 2%; width: 50%; margin-left: 25%;">
+
 <div style="margin-top: 2%; width: 50%; margin-left: 25%;" class="input-group flex-nowrap">
     <span class="input-group-text" id="addon-wrapping">@</span>
     <input type="text" class="form-control" placeholder="inserisci qui la tua email">
   </div>
-
 {% endblock %}
