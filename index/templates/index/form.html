@@ -21,25 +21,25 @@
 <form class="row g-3 responsive" style="margin-top: 20px;">
   <div class="col-md-6">
     <label class="form-label">nome</label>
-    <input type="text" class="form-control" id="inputEmail4">
+    <input type="text" class="form-control" id="inputEmail4" required>
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">cognome</label>
-    <input type="text" class="form-control" id="inputPassword4">
+    <input type="text" class="form-control" id="inputPassword4" required>
   </div>
   <div class="input-group flex-nowrap">
     <span class="input-group-text" id="addon-wrapping">@</span>
-    <input type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping">
+    <input type="email" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping" required>
   </div>
   <div id="date-picker-example" class="md-form md-outline input-with-post-icon datepicker" inline="true" style="margin-top: 20px;">
     <label for="example">inserisci la data di nascita</label>
-    <input placeholder="Select date" type="date" id="example" class="form-control">
+    <input placeholder="Select date" type="date" id="example" class="form-control" required>
     
     <i class="fas fa-calendar input-prefix"></i>
   </div>
   <div class="input-group mb-3">
     <label class="input-group-text" for="inputGroupSelect01">numero biglietti</label>
-    <select class="form-select" id="inputGroupSelect01">
+    <select class="form-select" id="inputGroupSelect01" required>
       <option selected></option>
       <option value="1">1</option>
       <option value="2">2</option>

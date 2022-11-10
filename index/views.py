@@ -7,3 +7,4 @@ def index(request):
 
 def form(request):
     return render(request, 'index/form.html')
+
