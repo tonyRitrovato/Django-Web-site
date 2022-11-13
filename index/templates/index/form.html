@@ -4,45 +4,78 @@
 <style>
   @media (min-width: 1000px){
     .responsive{
-      width: 40%;
-      margin-left: 30%;
-      margin-top: 5%;
+      width: 23%;
+    }
+
+    .responsive-form-card{
+      margin-left: 25%;
+      margin-top: 15%;
+    }
+
+    .responsive-text-card{
+      margin-left: 50%;
+      margin-top: 10%;
+      margin-bottom: -45%;
     }
   }
 
   @media (max-width: 1000px) {
     .responsive{
       width: 80%;
+    }
+
+    .responsive-text-card{
       margin-left: 10%;
-      margin-top: 20%;
+      margin-top: 10%;
+    }
+
+    .responsive-form-card{
+      margin-left: 10%;
+      margin-top: 10%;
     }
   }
+
+  @keyframes animation{
+    from{opacity: 0%;}
+    to{opacity: 100%;}
+  }
 </style>
- <div class="card responsive shadow p-3 mb-5 bg-body rounded" >
-  <div class="card-body">
-    <h5 class="card-title">Compila i campi per ottenere il biglietto</h5>
-     <form id="myForm" class="row g-3" style="margin-top: 20px;" method="POST">
-      {% csrf_token %}
-       <div class="col-md-6">
-        <label class="form-label">nome</label>
-        {{ form.nome }}
+<div class="container">
+  <div class="row">
+    <div class="card responsive responsive-text-card shadow p-3" style="opacity: 0%; background-color: #0033dd; animation-name: animation; animation-duration: 1.5s; animation-delay: 1s; animation-fill-mode: forwards;">
+      <div class="card-body">
+        <h1 class="card-title text-white" style="font-size: 4em">Grazie</h1>
+        <div style="height: 60%;"></div>
+        <h2 class=" mb-2 text-white" style="font-family: Courier new;">Ci sentiremo presto!</h2>
       </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">cognome</label>
-        {{ form.cognome }}
+    </div>
+    <div class="card responsive responsive-form-card shadow p-3 mb-5 bg-body rounded" style=" opacity:0% ;animation-name: animation; animation-duration: 1.5s; animation-fill-mode: forwards;">
+      <div class="card-body">
+        <h5 class="card-title">Compila i campi per ottenere il biglietto</h5>
+         <form id="myForm" class="row g-3" style="margin-top: 10px;" method="POST">
+          {% csrf_token %}
+           <div class="">
+            <label class="form-label">nome</label>
+            {{ form.nome }}
+          </div>
+          <div class="">
+            <label for="inputPassword4" class="form-label">cognome</label>
+            {{ form.cognome }}
+          </div>
+          <div class="input-group flex-nowrap">
+             <span class="input-group-text" id="addon-wrapping">@</span> 
+              {{ form.email }}
+          </div>
+          <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">numero biglietti</label>
+            {{form.numeroBiglietti}}
+          </div>
+          <div class="d-flex mb-3">
+            <button type="submit" class="btn p-2 btn-primary" id="submit" style="background-color: #0033dd;">Procedi</button>
+            <button onclick="reset()" type="button" class="btn btn-primary ms-auto p-2"  style="background-color: #0033dd;">Azzera</button>
+        </form>  
       </div>
-      <div class="input-group flex-nowrap">
-         <span class="input-group-text" id="addon-wrapping">@</span> 
-          {{ form.email }}
-      </div>
-      <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect01">numero biglietti</label>
-        {{form.numeroBiglietti}}
-      </div>
-      <div class="d-flex mb-3">
-        <button type="submit" class="btn btn-primary p-2" id="submit">Procedi</button>
-        <button onclick="reset()" type="button" class="btn btn-primary ms-auto p-2">Azzera</button>
-    </form>  
+  </div>
   </div>
 </div> 
 <script>
