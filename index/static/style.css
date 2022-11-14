@@ -28,7 +28,7 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #fff;
+    color: #212121;
     font-size: 2.5rem;
 }
 
@@ -59,7 +59,7 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #212121;
     line-height: 65px;
     font-size: 2.4rem;
 }
@@ -111,7 +111,7 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #111;
+        background-color: #ddd;
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -145,7 +145,7 @@ body {
 }
 
 .navTrigger i {
-    background-color: #fff;
+    background-color: #212121;
     border-radius: 2px;
     content: '';
     display: block;
@@ -324,7 +324,7 @@ body {
 
 .affix {
     padding: 0;
-    background-color: #111;
+    background-color: #ddd;
 }
 
 .myH2 {
