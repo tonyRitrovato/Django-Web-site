@@ -9,16 +9,15 @@ class MyForm(forms.ModelForm):
     labels = {'fullname': "Name", "cognome": "cognome", 'email': "email", 'numeroBiglietti': "numero biglietti" }
     widgets = {
           'nome': TextInput(attrs={
-              'class': "",
+              'class': "peer w-full h-12 text-2xl bg-indigo-50 outline-none",
               }),
           'cognome': TextInput(attrs={
-              'class': "", 
+              'class': "w-full h-12 text-2xl peer bg-indigo-50 outline-none", 
               }),
           'email': EmailInput(attrs={
-            'class' : "",
-            'placeholder' : "email",
+            'class' : "w-full h-12 text-2xl peer bg-indigo-50 outline-none",
               }),
           'numeroBiglietti' : Select(attrs={
-             'class' : ""
+             'class' : "focus:outline-none text-indigo-300 w-[20%] shadow bg-indigo-50 border border-indigo-300"
               })
     }

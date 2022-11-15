@@ -6,36 +6,50 @@
   <h1 class="text-9xl text-white" style="font-family: Brush Script MT;">Lorem ipsum</h1>
   <h2 class=" text-4xl text-slate-300" style="font-family: Calibri;">lorem ipsum</h2>
 </div>
-  <div class="md:w-[20%] bg-indigo-200 md:h-[350px] md:ml-[60%] shadow-2xl"></div>
-  <div class="max-[700px]:mt-[10%] w-[80%] h-[350px] ml-[10%] md:-mt-[350px] md:p-10 bg-indigo-50 md:space-y-16 md:w-[40%] md:mx-[20%] md:h-[350px] shadow-2xl">
-    <h1 class="text-left text-4xl space-y-8">Compila i campi per ottenere il biglietto</h1>
-    <form id="myForm" class="text-left text-4xl space-y-8" method="POST">
-      {% csrf_token %}
-      <div class="">
-        <label class="">nome</label>
-        {{ form.nome }}
-      </div>
-      <div class="">
-        <label for="inputPassword4" class="">cognome</label>
-        {{ form.cognome }}
-      </div>
-      <div class="">
-        <span class="" id="addon-wrapping">@</span> 
-          {{ form.email }}
-      </div>
-      <div class="">
-        <label class="" for="inputGroupSelect01">numero biglietti</label>
-        {{form.numeroBiglietti}}
-      </div>
-      <div class="">
-        <button type="submit" class="" id="submit" style="background-color: #0033dd;">Procedi</button>
-        <button onclick="reset()" type="button" class=""  style="background-color: #0033dd;">Azzera</button>
-    </form>  
-  </div>
+<div class="md:w-[20%] bg-indigo-300 md:h-[370px] md:ml-[60%] shadow-2xl"></div>
+<div
+  class="max-[700px]:mt-[10%] w-[80%] h-[370px] ml-[10%] md:-mt-[370px] md:p-10 bg-indigo-50 md:space-y-16 md:w-[40%] md:mx-[20%] shadow-2xl">
+  <h1 class="max-[700px]:pt-[5%] text-indigo-300 mx-[10%] text-left text-3xl space-y-8">Compila i campi per ottenere il biglietto</h1>
+  <form id="myForm" class="text-left text-4xl space-y-8" method="POST">
+    {% csrf_token %}
+    <div class="max-[700px]:w-[80%] mx-[10%] w-[60%] relative group border-2 border-x-indigo-50 border-t-indigo-50 border-b-indigo-300">
+      {{ form.nome }}
+      <label
+        class="text-indigo-300 transform transition-all absolute top-0 left-0 h-full
+         flex items-center pl-2 text-3xl group-focus-within:text-3xl 
+         peer-valid:text-2xl group-focus-within:h-1/2 peer-valid:h-1/2
+         group-focus-within:-translate-y-full peer-valid:-translate-y-full">nome</label>
+    </div>
+    <div class="max-[700px]:w-[80%] mx-[10%] w-[60%] relative group border-2 border-x-indigo-50 border-t-indigo-50 border-b-indigo-300">
+      {{ form.cognome }}
+      <label
+      class="text-indigo-300 transform transition-all absolute top-0 left-0 h-full
+         flex items-center pl-2 text-3xl group-focus-within:text-3xl 
+         peer-valid:text-2xl group-focus-within:h-1/2 peer-valid:h-1/2
+         group-focus-within:-translate-y-full peer-valid:-translate-y-full">cognome</label>
+    </div>
+    <div class="max-[700px]:w-[80%] mx-[10%] w-[60%] relative group border-2 border-x-indigo-50 border-t-indigo-50 border-b-indigo-300">
+      {{ form.email }}
+      <label
+      class="text-indigo-300 transform transition-all absolute top-0 left-0 h-full
+            flex items-center pl-2 text-3xl group-focus-within:text-3xl 
+            peer-valid:text-2xl group-focus-within:h-1/2 peer-valid:h-1/2
+            group-focus-within:-translate-y-full peer-valid:-translate-y-full"  
+      >Email</label>
+    </div>
+    <div class="">
+      <label class="mx-[10%] text-indigo-300" for="inputGroupSelect01">numero biglietti</label>
+      {{form.numeroBiglietti}}
+    </div>
+    <div class="">
+      <button type="submit" class="button ml-[10%] w-[20%] shadow-2xl p-3 border bg-[#55acac] text-white" id="submit" >Procedi</button>
+      <button onclick="reset()" type="button" class="button ml-[20%] w-[20%] shadow-2xl p-3 border bg-[#55acac] text-white">Azzera</button>
+  </form>
+</div>
 <script>
- function reset() { 
-   document.getElementById("myForm").reset();
- }
+  function reset() {
+    document.getElementById("myForm").reset();
+  }
 </script>
 
 {% endblock %}
