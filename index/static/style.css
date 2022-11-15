@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 html,
-body {
+div.navBarLayout {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,12 +28,12 @@ body {
 
 .nav div.logo a {
     text-decoration: none;
-    color: #212121;
+    color: #fff;
     font-size: 2.5rem;
 }
 
 .nav div.logo a:hover {
-    color: #0033dd;
+    color: #c7d2fe;
 }
 
 .nav div.main_list {
@@ -59,13 +59,13 @@ body {
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #212121;
+    color: #fff;
     line-height: 65px;
     font-size: 2.4rem;
 }
 
 .nav div.main_list ul li a:hover {
-    color: #0033dd;
+    color: #c7d2fe;
 }
 
 .navTrigger {
@@ -80,7 +80,7 @@ body {
 }
 
 
-/* Media qurey section */
+/* Media query section */
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
@@ -111,7 +111,7 @@ body {
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: #ddd;
+        background-color: #55acac;
         /*same background color of navbar*/
         background-position: center top;
     }
@@ -145,7 +145,7 @@ body {
 }
 
 .navTrigger i {
-    background-color: #212121;
+    background-color: #fff;
     border-radius: 2px;
     content: '';
     display: block;
@@ -324,21 +324,13 @@ body {
 
 .affix {
     padding: 0;
-    background-color: #ddd;
+    /* background-image: linear-gradient(to left bottom, #051937, #001f5a, #00237d, #00229e, #0316bd); */
+    background-color: #55acac;
 }
 
-.myH2 {
-	text-align:center;
-	font-size: 4rem;
-}
-.myP {
-	text-align: justify;
-	padding-left:15%;
-	padding-right:15%;
-	font-size: 20px;
-}
-@media all and (max-width:700px){
-	.myP {
-		padding:2%;
-	}
+.form-background{
+    /* background-image: linear-gradient(to bottom, #2e2bf0, #244cf5, #2f65f6,
+                                         #457bf5, #608ff0, #539bf0, #50a6ed,
+                                          #58b0e8, #2ab5e2, #00b9d6, #00bbc5, #00bcb0); */
+    background-color: #55acac;
 }

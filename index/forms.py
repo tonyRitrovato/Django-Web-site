@@ -9,16 +9,16 @@ class MyForm(forms.ModelForm):
     labels = {'fullname': "Name", "cognome": "cognome", 'email': "email", 'numeroBiglietti': "numero biglietti" }
     widgets = {
           'nome': TextInput(attrs={
-              'class': "form-control",
+              'class': "",
               }),
           'cognome': TextInput(attrs={
-              'class': "form-control", 
+              'class': "", 
               }),
           'email': EmailInput(attrs={
-            'class' : "form-control",
+            'class' : "",
             'placeholder' : "email",
               }),
           'numeroBiglietti' : Select(attrs={
-             'class' : "form-select"
+             'class' : ""
               })
     }
